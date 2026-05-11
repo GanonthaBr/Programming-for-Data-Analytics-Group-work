@@ -1,0 +1,52 @@
+{
+  "records_total": 1022,
+  "records_modeled": 913,
+  "countries": 233,
+  "years": [
+    2000,
+    2022
+  ],
+  "median_homicide_rate": 3.3,
+  "mean_homicide_rate": 7.703395399780943,
+  "std_homicide_rate": 11.35700376469299,
+  "model_results": [
+    {
+      "name": "LinearRegression",
+      "train_r2": 0.8326519254656197,
+      "test_r2": 0.8647629647538007,
+      "test_rmse": 5.035357901391491,
+      "test_mae": 1.8185156513399805,
+      "cv_r2_mean": 0.8373861583447937,
+      "cv_r2_std": 0.1318430825433388,
+      "best_params": {}
+    },
+    {
+      "name": "RandomForest",
+      "train_r2": 0.9080889355233285,
+      "test_r2": 0.871776488953691,
+      "test_rmse": 4.903050386147445,
+      "test_mae": 1.9457086518236335,
+      "cv_r2_mean": 0.8406491091454459,
+      "cv_r2_std": 0.11357321390535041,
+      "best_params": {
+        "model__max_depth": 10,
+        "model__min_samples_leaf": 3,
+        "model__n_estimators": 400
+      }
+    },
+    {
+      "name": "GradientBoosting",
+      "train_r2": 0.8950846262824088,
+      "test_r2": 0.884395346912861,
+      "test_rmse": 4.655541274934966,
+      "test_mae": 1.942684986050887,
+      "cv_r2_mean": 0.8320404717203923,
+      "cv_r2_std": 0.12044226452100934,
+      "best_params": {
+        "model__learning_rate": 0.05,
+        "model__max_depth": 2,
+        "model__n_estimators": 200
+      }
+    }
+  ]
+}
